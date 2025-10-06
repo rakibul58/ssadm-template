@@ -2,7 +2,6 @@ const translations = {
     en: {
         lang: 'বাংলা',
         mainTitle: 'Satbaria Shah Amanat (R:) Dakhil Madrasha',
-        nav1: '🏠',
         nav2: 'Campus',
         nav3: 'Admission',
         nav4: 'Academic',
@@ -59,7 +58,6 @@ const translations = {
     bn: {
         lang: 'English',
         mainTitle: 'সাতবাড়িয়া শাহ আমানত (রঃ) দাখিল মাদরাসা',
-        nav1: '🏠',
         nav2: 'ক্যাম্পাস',
         nav3: 'ভর্তি',
         nav4: 'একাডেমিক',
@@ -115,7 +113,7 @@ const translations = {
     }
 };
 
-let currentLang = 'en';
+let currentLang = 'bn';
 
 function toggleLang() {
     currentLang = currentLang === 'bn' ? 'en' : 'bn';
