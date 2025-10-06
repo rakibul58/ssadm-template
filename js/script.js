@@ -2,6 +2,7 @@ const translations = {
     en: {
         lang: 'বাংলা',
         mainTitle: 'Satbaria Shah Amanat (R:) Dakhil Madrasha',
+        nav1: '🏠',
         nav2: 'Campus',
         nav3: 'Admission',
         nav4: 'Academic',
@@ -53,11 +54,18 @@ const translations = {
         'application-sub3': 'Application Status',
         'jubilee-sub1': 'Event Schedule',
         'jubilee-sub2': 'Photo Album',
-        'jubilee-sub3': 'Celebration'
+        'jubilee-sub3': 'Celebration',
+        footerTitle: 'Satbaria Shah Amanat (R:) Dakhil Madrasha',
+        footerEiin: 'EIIN: 104184, Established: 1974',
+        footerAddress: 'Village: Satbaria, Tahirpur, Satbaria, Post: 07, Upazila: Chandanaish, District: Chattogram.',
+        footerContact: '01814318440, 01309104184',
+        footerEmail: 'shahamanat84@gmail.com',
+        footerDevLabel: 'Developed By'
     },
     bn: {
         lang: 'English',
         mainTitle: 'সাতবাড়িয়া শাহ আমানত (রঃ) দাখিল মাদরাসা',
+        nav1: '🏠',
         nav2: 'ক্যাম্পাস',
         nav3: 'ভর্তি',
         nav4: 'একাডেমিক',
@@ -109,7 +117,13 @@ const translations = {
         'application-sub3': 'আবেদনের অবস্থা',
         'jubilee-sub1': 'ইভেন্ট সূচি',
         'jubilee-sub2': 'ফটো অ্যালবাম',
-        'jubilee-sub3': 'উদযাপন'
+        'jubilee-sub3': 'উদযাপন',
+        footerTitle: 'সাতবাড়িয়া শাহ আমানত (রঃ) দাখিল মাদরাসা',
+        footerEiin: 'ইআইআইএন: ১০৪১৮৪, প্রতিষ্ঠাকাল: ১৯৭৪',
+        footerAddress: 'গ্রাম: সাতবাড়ীয়া, তাহিরপুর, সাতবাড়ীয়া, পোস্ট: ০৭, উপজেলা: চন্দনাইশ, জেলা: চট্টগ্রাম।',
+        footerContact: '০১৮১৪৩১৮৪৪০, ০১৩০৯১০৪১৮৪',
+        footerEmail: 'shahamanat84@gmail.com',
+        footerDevLabel: 'ডেভেলপ করেছেন'
     }
 };
 
@@ -147,7 +161,20 @@ function updateContent() {
             elem.textContent = t[key];
         }
     });
+
+    // Update footer content
+    document.getElementById('footerTitle').textContent = t.footerTitle;
+    document.getElementById('footerEiin').textContent = t.footerEiin;
+    document.getElementById('footerAddress').textContent = t.footerAddress;
+    document.getElementById('footerContact').textContent = t.footerContact;
+    document.getElementById('footerEmail').textContent = t.footerEmail;
+    document.getElementById('footerDevLabel').textContent = t.footerDevLabel;
 }
+
+// Initialize content on page load
+window.addEventListener('DOMContentLoaded', function () {
+    updateContent();
+});
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.hero-slide');
@@ -176,7 +203,7 @@ function changeJubileeColor() {
 
 // Change color every 3-5 seconds randomly
 function scheduleNextColorChange() {
-    const delay = 1500; // Random between 3000-5000ms
+    const delay = Math.random() * (5000 - 3000) + 3000; // Random between 3000-5000ms
     setTimeout(() => {
         changeJubileeColor();
         scheduleNextColorChange();
