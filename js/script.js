@@ -60,7 +60,15 @@ const translations = {
         footerAddress: 'Village: Satbaria, Tahirpur, Satbaria, Post: 07, Upazila: Chandanaish, District: Chattogram.',
         footerContact: '01814318440, 01309104184',
         footerEmail: 'shahamanat84@gmail.com',
-        footerDevLabel: 'Developed By'
+        footerDevLabel: 'Developed By',
+        noticeTitle: 'Notice',
+        viewAllBtn: 'All Notices',
+        notice1: 'N.....',
+        notice2: '31-08-2025 All approved Dakhil, Alim, Division, Assessment Department open and.....',
+        notice3: 'MPO exemption related. Madrasa teacher-staff serial number/25 head allowance payment......',
+        notice4: 'Madrasa',
+        notice5: '52nd Independence Day Sports Competition Schedule-2025.....',
+        noticeSlideText: 'Registration of Students Studying in Class 8 (e-SIF) 2023 Application from 01-10-23'
     },
     bn: {
         lang: 'English',
@@ -123,7 +131,15 @@ const translations = {
         footerAddress: 'গ্রাম: সাতবাড়ীয়া, তাহিরপুর, সাতবাড়ীয়া, পোস্ট: ০৭, উপজেলা: চন্দনাইশ, জেলা: চট্টগ্রাম।',
         footerContact: '০১৮১৪৩১৮৪৪০, ০১৩০৯১০৪১৮৪',
         footerEmail: 'shahamanat84@gmail.com',
-        footerDevLabel: 'ডেভেলপ করেছেন'
+        footerDevLabel: 'ডেভেলপ করেছেন',
+        noticeTitle: 'নোটিশ',
+        viewAllBtn: 'সকল নোটিশ',
+        notice1: 'N.....',
+        notice2: '৩১-০৮-২০২৫ তারিখের সকল অনুমোদিত দাখিল, আলিম, বিভাগ, মূল্যায়ন বিভাগ খোলা ও শা.....',
+        notice3: 'এমপিও ছাড় সংক্রান্ত. মাদরাসা শিক্ষক-কর্মচারীদের ক্রমাঙ্ক/২৫ খাতের নেতা-ভাতার সেন......',
+        notice4: 'মাদ্রাসা',
+        notice5: '৫২তম স্বাধীনতা দিবস ক্রীড়া প্রতিযোগিতার সময়সূচী-২০২৫.....',
+        noticeSlideText: 'ক্লাস ৮ এ অধ্যয়নরত শিক্ষার্থীদের নিবন্ধন (e-SIF) 2023 আবেদনী ০১-১০-২৩ ইং হইতে'
     }
 };
 
@@ -169,6 +185,16 @@ function updateContent() {
     document.getElementById('footerContact').textContent = t.footerContact;
     document.getElementById('footerEmail').textContent = t.footerEmail;
     document.getElementById('footerDevLabel').textContent = t.footerDevLabel;
+
+    // Update notice content
+    document.getElementById('noticeTitle').textContent = t.noticeTitle;
+    document.getElementById('viewAllBtn').textContent = t.viewAllBtn;
+    document.getElementById('notice1').textContent = t.notice1;
+    document.getElementById('notice2').textContent = t.notice2;
+    document.getElementById('notice3').textContent = t.notice3;
+    document.getElementById('notice4').textContent = t.notice4;
+    document.getElementById('notice5').textContent = t.notice5;
+    document.getElementById('noticeSlideText').textContent = t.noticeSlideText;
 }
 
 // Initialize content on page load
@@ -190,6 +216,7 @@ function nextSlide() {
     showSlide(currentSlide);
 }
 
+// Change slide every 3 seconds
 setInterval(nextSlide, 3000);
 
 // Golden Jubilee color change
