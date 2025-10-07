@@ -89,7 +89,35 @@ const translations = {
         link8: 'Martyred Intellectual Division',
         link9: 'Anti-Corruption Commission',
         link10: 'Directorate of Madrasa Education',
-        link11: 'Bangladesh Madrasa Education Board'
+        link11: 'Bangladesh Madrasa Education Board',
+        jubilee: 'Golden Jubilee Corner',
+        campus: 'Campus',
+        admission: 'Admission',
+        academic: 'Academic',
+        paper: 'Academic Paper',
+        teacher: 'Student',
+        result: 'Result',
+        resources: 'Resources',
+        gallery: 'Gallery',
+        jubileeItems: ['Notice', 'Activities', 'Photo Gallery', 'Video Gallery'],
+        campusItems: [
+            'Institution Profile',
+            'History',
+            'Facilities',
+            'Teacher Assembly',
+            'MPO & Nationalization Info',
+            'Human Committee',
+            'Founder',
+            'President',
+            'Super'
+        ],
+        admissionItems: ['Our Curriculum', 'Our Staff'],
+        academicItems: ['Our Curriculum', 'Our Staff'],
+        paperItems: ['Q&A'],
+        teacherItems: ['Monthly Student Count', 'Salary'],
+        resultItems: ['Board Exam Results'],
+        resourcesItems: ['Library', 'Computer Lab'],
+        galleryItems: ['Photo Gallery', 'Video Gallery']
     },
     bn: {
         lang: 'English',
@@ -181,7 +209,35 @@ const translations = {
         link8: 'শহীদশিরনি বিভাগ',
         link9: 'দুর্নীতি দমন কমিশন',
         link10: 'মাদ্রাসা শিক্ষা অধিদপ্তর',
-        link11: 'বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড'
+        link11: 'বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড',
+        jubilee: 'সুবর্ণজয়ন্তী কর্নার',
+        campus: 'ক্যাম্পাস',
+        admission: 'ভর্তি',
+        academic: 'একাডেমিক',
+        paper: 'একাডেমিক পেপার',
+        teacher: 'শিক্ষার্থী',
+        result: 'ফলাফল',
+        resources: 'রিসোর্স',
+        gallery: 'গ্যালারী',
+        jubileeItems: ['নোটিশ', 'কার্যক্রম', 'ছবির গ্যালারী', 'ভিডিও গ্যালারী'],
+        campusItems: [
+            'প্রতিষ্ঠান পরিচিতি',
+            'ইতিহাস',
+            'ভৌত সুবিধা',
+            'শিক্ষক সমাবরণ',
+            'এমপিও ও জাতীয়করন তত্থ্য',
+            'মানবিক কমিটি',
+            'প্রতিষ্ঠাতা',
+            'সভাপতি',
+            'সুপার'
+        ],
+        admissionItems: ['আমাদের শিক্ষাক্রমজী', 'আমাদের কর্মীরা'],
+        academicItems: ['আমাদের শিক্ষাক্রমজী', 'আমাদের কর্মীরা'],
+        paperItems: ['প্রশ্নোত্তর'],
+        teacherItems: ['মাসিক শিক্ষার্থীর সংখ্যা', 'বেতন'],
+        resultItems: ['বোর্ড পরীক্ষার ফলাফল'],
+        resourcesItems: ['গ্রন্থাগার', 'কম্পিউটার ল্যাব'],
+        galleryItems: ['ছবির গ্যালারী', 'ভিডিও গ্যালারী']
     }
 };
 
@@ -262,6 +318,26 @@ function updateContent() {
             }
         }
     }
+
+    document.getElementById('jubilee-header').textContent = t.jubilee;
+    document.getElementById('campus-header').textContent = t.campus;
+    document.getElementById('admission-header').textContent = t.admission;
+    document.getElementById('academic-header').textContent = t.academic;
+    document.getElementById('paper-header').textContent = t.paper;
+    document.getElementById('teacher-header').textContent = t.teacher;
+    document.getElementById('result-header').textContent = t.result;
+    document.getElementById('resources-header').textContent = t.resources;
+    document.getElementById('gallery-header').textContent = t.gallery;
+
+    // Update all list items
+    const sections = ['jubilee', 'campus', 'admission', 'academic', 'paper', 'teacher', 'result', 'resources', 'gallery'];
+    sections.forEach(section => {
+        const items = t[section + 'Items'];
+        items.forEach((text, i) => {
+            const elem = document.getElementById(section + '-item' + (i + 1));
+            if (elem) elem.textContent = text;
+        });
+    });
 }
 
 // Initialize content on page load
