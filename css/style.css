@@ -16,13 +16,15 @@
 body {
   background-image: url("../assets/images/bg_main.gif");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: repeat-y;
 }
 
 .container {
   width: 65vw;
   margin: auto;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
 @media screen and (max-width: 900px) {
@@ -353,14 +355,14 @@ body {
 }
 
 .footer-info h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  /* margin-bottom: 10px; */
   font-weight: 600;
 }
 
 .footer-info p {
-  margin: 5px 0;
-  font-size: 15px;
+  /* margin: 5px 0; */
+  font-size: 12px;
   line-height: 1.6;
 }
 
@@ -370,8 +372,8 @@ body {
 }
 
 .footer-developer p {
-  margin: 5px 0;
-  font-size: 14px;
+  /* margin: 5px 0; */
+  font-size: 12px;
 }
 
 .footer-developer .company {
@@ -411,10 +413,6 @@ body {
   flex: 1;
   width: 23%;
   min-width: 220px;
-  padding: 20px;
-  background-color: orange;
-  height: 400px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 756px) {
@@ -450,7 +448,7 @@ body {
   background-color: #efefef;
   padding: 0 10px 0px 0px;
   display: flex;
-  margin-top: 20px;
+  margin-top: 10px;
   gap: 20px;
 }
 
@@ -462,7 +460,6 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
- 
 }
 
 .notice-footer a {
@@ -493,6 +490,78 @@ body {
 }
 
 .notice-item a {
-    color: red;
-    font-size: 12px;
+  color: red;
+  font-size: 12px;
+}
+
+.founder-header,
+.principal-header,
+.super-header,
+.links-header {
+  background-color: #3a6351;
+  color: white;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.founder-image,
+.principal-image,
+.super-image {
+  display: flex;
+  justify-content: center;
+}
+
+.founder-image img,
+.principal-image img,
+.super-image img {
+  width: 150px;
+  height: 176px;
+  margin: 10px auto;
+}
+
+.founder-info,
+.principal-info,
+.super-info {
+  width: 220px;
+  margin: auto;
+}
+
+#founderName,
+#principalName,
+#superName {
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#founderTitle,
+#principalTitle,
+#superTitle {
+  text-align: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.links-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.link-item {
+  font-size: 14px;
+  width: 100%;
+  color: #666;
+  padding: 5px;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+}
+
+.link-item:hover {
+  text-decoration: underline;
+}
+
+.links-section {
+  margin-top: 20px;
 }

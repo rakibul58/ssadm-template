@@ -68,7 +68,28 @@ const translations = {
         notice3: 'MPO exemption related. Madrasa teacher-staff serial number/25 head allowance payment......',
         notice4: 'Madrasa',
         notice5: '52nd Independence Day Sports Competition Schedule-2025.....',
-        noticeSlideText: 'Registration of Students Studying in Class 8 (e-SIF) 2023 Application from 01-10-23'
+        noticeSlideText: 'Registration of Students Studying in Class 8 (e-SIF) 2023 Application from 01-10-23',
+        founderHeader: 'Founder',
+        founderName: 'Hazrat Shah Sufi Syed Naser Ullah (R:)',
+        founderTitle: 'Founder, Satbaria Shah Amanat (R:) Dakhil Madrasha',
+        principalHeader: 'Principal',
+        principalName: 'Shah Sufi Syed Kawsari Mohammadi Ahmad Ullah (Ma: Ibnu Ana)',
+        principalTitle: 'Principal, Satbaria Shah Amanat (R:) Dakhil Madrasha',
+        superHeader: 'Super',
+        superName: 'Maulana Mohammadur Haque',
+        superTitle: 'Super, Satbaria Shah Amanat (R:) Dakhil Madrasha',
+        linksHeader: 'Important Links',
+        link1: 'Ministry of Education',
+        link2: 'Board of Secondary & Higher Secondary Education, Dhaka',
+        link3: 'Directorate of Secondary & Higher Education',
+        link4: 'Secondary & Higher Education Division',
+        link5: 'Bangladesh Technical Education Board',
+        link6: 'Prime Minister\'s Education Assistance Trust',
+        link7: 'Prime Minister\'s Office',
+        link8: 'Martyred Intellectual Division',
+        link9: 'Anti-Corruption Commission',
+        link10: 'Directorate of Madrasa Education',
+        link11: 'Bangladesh Madrasa Education Board'
     },
     bn: {
         lang: 'English',
@@ -139,7 +160,28 @@ const translations = {
         notice3: 'এমপিও ছাড় সংক্রান্ত. মাদরাসা শিক্ষক-কর্মচারীদের ক্রমাঙ্ক/২৫ খাতের নেতা-ভাতার সেন......',
         notice4: 'মাদ্রাসা',
         notice5: '৫২তম স্বাধীনতা দিবস ক্রীড়া প্রতিযোগিতার সময়সূচী-২০২৫.....',
-        noticeSlideText: 'ক্লাস ৮ এ অধ্যয়নরত শিক্ষার্থীদের নিবন্ধন (e-SIF) 2023 আবেদনী ০১-১০-২৩ ইং হইতে'
+        noticeSlideText: 'ক্লাস ৮ এ অধ্যয়নরত শিক্ষার্থীদের নিবন্ধন (e-SIF) 2023 আবেদনী ০১-১০-২৩ ইং হইতে',
+        founderHeader: 'প্রতিষ্ঠাতা',
+        founderName: 'হযরত শাহ সুফি সৈয়দ নাসের উল্লাহ (রহঃ)',
+        founderTitle: 'প্রতিষ্ঠাতা, সাতবাড়িয়া শাহ আমানত(রহঃ) দাখিল মাদরাসা',
+        principalHeader: 'সভাপতি',
+        principalName: 'শাহ সুফি সৈয়দ কওসরী মোহাম্মদী আহমদ উল্লাহ (মাঃ ইবনু আনা)',
+        principalTitle: 'সভাপতি, সাতবাড়িয়া শাহ আমানত (রহ) দাখিল মাদরাসা।',
+        superHeader: 'সুপার',
+        superName: 'মাওলানা মোহাম্মদুর হক',
+        superTitle: 'সুপার, সাতবাড়িয়া শাহ আমানত (রহ) দাখিল মাদরাসা',
+        linksHeader: 'গুরুত্বপূর্ণ লিংক',
+        link1: 'শিক্ষা মন্ত্রনালয়',
+        link2: 'মাধ্যমিক ও উচ্চমাধ্যমিক শিক্ষা বোর্ড, ঢাকা',
+        link3: 'মাধ্যমিক ও উচ্চশিক্ষা অধিদপ্তর',
+        link4: 'মাধ্যমিক ও উচ্চ শিক্ষা বিভাগ',
+        link5: 'বাংলাদেশ কারিগরি শিক্ষা বোর্ড',
+        link6: 'প্রধানমন্ত্রী শিক্ষা সহায়তা ট্রাষ্ট',
+        link7: 'প্রধানমন্ত্রী কার্যালয়',
+        link8: 'শহীদশিরনি বিভাগ',
+        link9: 'দুর্নীতি দমন কমিশন',
+        link10: 'মাদ্রাসা শিক্ষা অধিদপ্তর',
+        link11: 'বাংলাদেশ মাদ্রাসা শিক্ষা বোর্ড'
     }
 };
 
@@ -195,6 +237,31 @@ function updateContent() {
     document.getElementById('notice4').textContent = t.notice4;
     document.getElementById('notice5').textContent = t.notice5;
     document.getElementById('noticeSlideText').textContent = t.noticeSlideText;
+    document.getElementById('founderHeader').textContent = t.founderHeader;
+    document.getElementById('founderName').textContent = t.founderName;
+    document.getElementById('founderTitle').textContent = t.founderTitle;
+
+    // Update principal section
+    document.getElementById('principalHeader').textContent = t.principalHeader;
+    document.getElementById('principalName').textContent = t.principalName;
+    document.getElementById('principalTitle').textContent = t.principalTitle;
+
+    // Update super section
+    document.getElementById('superHeader').textContent = t.superHeader;
+    document.getElementById('superName').textContent = t.superName;
+    document.getElementById('superTitle').textContent = t.superTitle;
+
+    // Update links section
+    document.getElementById('linksHeader').textContent = t.linksHeader;
+    for (let i = 1; i <= 11; i++) {
+        const linkElem = document.getElementById('link' + i);
+        if (linkElem) {
+            const linkTextElem = linkElem.querySelector('.link-text');
+            if (linkTextElem) {
+                linkTextElem.textContent = t['link' + i];
+            }
+        }
+    }
 }
 
 // Initialize content on page load
